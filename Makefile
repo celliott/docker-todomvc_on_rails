@@ -15,7 +15,7 @@ clean:
 
 clone:
 	rm -rf build
-	git clone git@github.com:$(GITHUB_ACCOUNT)/$(REPO).git build/$(REPO)
+	git clone https://github.com/$(GITHUB_ACCOUNT)/$(REPO).git build/$(REPO)
 	sed -i -e 's:db/:/data/db/:g' build/$(REPO)/config/database.yml
 
 container:
