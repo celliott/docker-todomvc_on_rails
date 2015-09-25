@@ -1,5 +1,7 @@
 # docker-todomvc_on_rails makefile
 
+GITHUB_ACCOUNT ?= smidwap
+REPO ?= todomvc_on_rails
 RAILS_ENV ?= development
 APP_URL = http://$(DOCKER_IP):5000
 PORTS = -p 5000:5000
