@@ -57,7 +57,7 @@ $ make container && make restart && sleep 5 && make open
 $ make clean
 	
 # restart container
-$  make restart
+$ make restart
 	
 # kill container
 $ make kill
