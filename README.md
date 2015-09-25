@@ -12,6 +12,7 @@ Usage:
 	
 	# start boot2docker
 	$ make docker_up
+	$ eval "$(boot2docker shellinit)"
 
 	# delete $(HOME)/data/* dir
 	$ make clean

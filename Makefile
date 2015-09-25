@@ -5,7 +5,7 @@ APP_URL = http://$(DOCKER_IP):5000
 PORTS = -p 5000:5000
 CONTAINER = todomvc_on_rails
 VOLUMES = -v $(HOME)/data/$(CONTAINER)/db:/data/db
-ENVS = -e RAILS_ENV=$(RAILS_ENV)
+ENVS = -e RAILS_ENV=$(RAILS_ENV) -e REPO=$(REPO)
 
 .PHONY: container run
 
@@ -15,7 +15,11 @@ clean:
 
 clone:
 	rm -rf build
+<<<<<<< HEAD
 	git clone https://github.com/$(GITHUB_ACCOUNT)/$(REPO).git build/$(REPO)
+=======
+	echo git clone https://github.com/$(GITHUB_ACCOUNT)/$(REPO).git build/$(REPO)
+>>>>>>> fixed start.sh and dicker_up
 	sed -i -e 's:db/:/data/db/:g' build/$(REPO)/config/database.yml
 
 container:
@@ -24,7 +28,6 @@ container:
 docker_up:
 	boot2docker init
 	boot2docker up
-	$(eval $(boot2docker shellinit))
 
 run:
 	docker run --name $(CONTAINER) --restart=always -i -d $(PORTS) $(ENVS) $(VOLUMES)  -t $(CONTAINER)
