@@ -13,8 +13,7 @@ $ export RAILS_ENV=test		# default is development. production not supported in t
 - start boot2docker
 
 ```
-$ make docker_up
-$ eval "$(boot2docker shellinit)"	# manual step
+$ make docker_up && eval "$(boot2docker shellinit)"
 ```
 
 - delete $(HOME)/build/* and checkout repo
@@ -47,7 +46,7 @@ $ make open
 - rebuild, run and open in safari
 
 ```
-$ make container && make restart && make open
+$ make container && make restart && sleep 5 && make open
 ```
 
 
