@@ -15,11 +15,7 @@ clean:
 
 clone:
 	rm -rf build
-<<<<<<< HEAD
 	git clone https://github.com/$(GITHUB_ACCOUNT)/$(REPO).git build/$(REPO)
-=======
-	echo git clone https://github.com/$(GITHUB_ACCOUNT)/$(REPO).git build/$(REPO)
->>>>>>> fixed start.sh and dicker_up
 	sed -i -e 's:db/:/data/db/:g' build/$(REPO)/config/database.yml
 
 container:
