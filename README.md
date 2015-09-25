@@ -4,7 +4,7 @@ Ruby on rails docker container for pulling and running todomvc_on_rails app. `ma
 
 ###Run app:
 
-- set envvars
+- set ruby env, optional
 
 ```
 $ export RAILS_ENV=test		# default is development. production not supported in todomvc_on_rails app
