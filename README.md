@@ -2,7 +2,7 @@
 
 Ruby on rails docker container for pulling and running todomvc_on_rails app. `make` is used an api for the container. Data is persisted after container restarts. ruby version is 2.0.0 <- specified by app
 
-###Usage:
+###Run app:
 
 - set envvars
 
@@ -23,7 +23,7 @@ $ eval "$(boot2docker shellinit)"	# manual step
 $ make clone
 ```
 
-- pull repo and build container
+- build container
 
 ```
 $ make container
@@ -42,7 +42,28 @@ $ make run
 $ make open
 ```
 
-other useful commands
+###Rebuild and run app:
+
+- rebuild container
+
+```
+$ make container
+```
+
+- restart container
+
+```
+$ export DOCKER_IP=$(boot2docker ip)	# manual step
+$ make restart
+```
+
+- open in safari
+
+```
+$ make open
+```
+
+###Other useful commands:
 
 ```
 # delete $(HOME)/data/$(CONTAINER) dir
