@@ -42,7 +42,7 @@ $ make run
 $ make open
 ```
 
-other commands
+other useful commands
 
 ```
 # delete $(HOME)/data/$(CONTAINER) dir
