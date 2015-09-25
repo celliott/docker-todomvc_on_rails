@@ -5,14 +5,11 @@ Ruby on rails docker container for pulling and running todomvc_on_rails app. `ma
 Usage:
 
 	# set envvars
-	$ export GITHUB_ACCOUNT=smidwap
-	$ export REPO=todomvc_on_rails
-	$ export DOCKER_IP=$(boot2docker ip)
 	$ export RAILS_ENV=test		# default is development. production not supported in todomvc_on_rails
 	
 	# start boot2docker
 	$ make docker_up
-	$ eval "$(boot2docker shellinit)"
+	$ eval "$(boot2docker shellinit)"	# manual step
 
 	# delete $(HOME)/data/* dir
 	$ make clean
@@ -24,6 +21,7 @@ Usage:
 	$ make container
 	
 	# run container
+	$ export DOCKER_IP=$(boot2docker ip)	# manual step
 	$ make run
 
 	# restart container
