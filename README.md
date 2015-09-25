@@ -53,7 +53,6 @@ $ make container
 - restart container
 
 ```
-$ export DOCKER_IP=$(boot2docker ip)	# manual step
 $ make restart
 ```
 
