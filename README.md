@@ -16,7 +16,7 @@ $ export RAILS_ENV=test		# default is development. production not supported in t
 $ make docker_up && eval "$(boot2docker shellinit)"
 ```
 
-- delete $(HOME)/build/* and checkout repo
+- delete $HOME/build/* and checkout repo
 
 ```
 $ make clone
@@ -53,7 +53,7 @@ $ make container && make restart && sleep 5 && make open
 ###Other useful commands:
 
 ```
-# delete $(HOME)/data/$(CONTAINER) dir
+# delete $HOME/data/$(CONTAINER)
 $ make clean
 	
 # restart container
