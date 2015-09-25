@@ -38,5 +38,6 @@ Usage:
 	$ make open
 
 Persistent Data:
+
 	# located in 
-	$HOME/data/<container>/db/$RAILS_ENV.sqlite3
+	$HOME/data/$(CONTAINER)/db/$RAILS_ENV.sqlite3
