@@ -44,23 +44,12 @@ $ make open
 
 ###Rebuild and run app:
 
-- rebuild container
+- rebuild, run and open in safari
 
 ```
-$ make container
+$ make container && make restart && make open
 ```
 
-- restart container
-
-```
-$ make restart
-```
-
-- open in safari
-
-```
-$ make open
-```
 
 ###Other useful commands:
 
