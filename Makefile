@@ -11,10 +11,11 @@ ENVS = -e RAILS_ENV=$(RAILS_ENV)
 
 clean:
 	rm -rf $(HOME)/data/$(CONTAINER)
+	rm -rf build
 
 clone:
-	rm -rf ./build/*
-	git clone git@github.com:$(GITHUB_ACCOUNT)/$(REPO).git build
+	rm -rf build
+	git clone git@github.com:$(GITHUB_ACCOUNT)/$(REPO).git build/$(REPO)
 	sed -i -e 's:db/:/data/db/:g' build/$(REPO)/config/database.yml
 
 container:
@@ -24,10 +25,6 @@ docker_up:
 	boot2docker init
 	boot2docker up
 	$(eval $(boot2docker shellinit))
-
-data_dir:
-	sudo mkdir -p $(HOME)/data
-	sudo chown 777 $(HOME)/data
 
 run:
 	docker run --name $(CONTAINER) --restart=always -i -d $(PORTS) $(ENVS) $(VOLUMES)  -t $(CONTAINER)
