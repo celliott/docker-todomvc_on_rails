@@ -6,45 +6,61 @@ Ruby on rails docker container for pulling and running todomvc_on_rails app. `ma
 
 1. set envvars
 
-	$ export RAILS_ENV=test		# default is development. production not supported in todomvc_on_rails app
-	
+```
+$ export RAILS_ENV=test		# default is development. production not supported in todomvc_on_rails app
+```
+
 2. start boot2docker
 
-	$ make docker_up
-	$ eval "$(boot2docker shellinit)"	# manual step
-	
+```
+$ make docker_up
+$ eval "$(boot2docker shellinit)"	# manual step
+```
+
 3. delete $(HOME)/build/* and checkout repo
 
-	$ make clone
-	
+```
+$ make clone
+```
+
 4. pull repo and build container
 
-	$ make container
-	
+```
+$ make container
+```
+
 5. run container
 
-	$ export DOCKER_IP=$(boot2docker ip)	# manual step
-	$ make run
-	
+```
+$ export DOCKER_IP=$(boot2docker ip)	# manual step
+$ make run
+```
+
 6. open in safari
 
-	$ make open
-	
+```
+$ make open
+```
+
 other commands
 
-	# delete $(HOME)/data/$(CONTAINER) dir
-	$ make clean
+```
+# delete $(HOME)/data/$(CONTAINER) dir
+$ make clean
 	
-	# restart container
-	$  make restart
+# restart container
+$  make restart
 	
-	# kill container
-	$ make kill
+# kill container
+$ make kill
 	
-	# tail container logs
-	$ make tail
+# tail container logs
+$ make tail
+```
 
 ###Persistent Data:
 
-	# located in 
-	$HOME/data/$(CONTAINER)/db/$RAILS_ENV.sqlite3
+```
+# located in 
+$HOME/data/$(CONTAINER)/db/$RAILS_ENV.sqlite3
+```
